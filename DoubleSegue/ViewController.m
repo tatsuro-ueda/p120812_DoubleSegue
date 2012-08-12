@@ -18,8 +18,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self performSelector:@selector(segue) withObject:nil afterDelay:1.0];
 }
 
+- (void)segue
+{
+    [self performSegueWithIdentifier:@"toBlue" sender:self];
+}
 - (void)viewDidUnload
 {
     [super viewDidUnload];
